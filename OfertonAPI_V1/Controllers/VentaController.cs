@@ -1,4 +1,5 @@
 ﻿using Business;
+using Entity;
 using Microsoft.AspNetCore.Mvc;
 using NLog;
 using System;
@@ -8,11 +9,13 @@ using System.Threading.Tasks;
 
 namespace OfertonAPI_V1.Controllers
 {
-    
+
     [ApiController]
     public class VentaController : Controller
     {
         private readonly ProductoBusiness objProducto = new ProductoBusiness();
+        private readonly OrdenBusiness objOrden = new OrdenBusiness();
+
 
         private readonly Logger logger = LogManager.GetCurrentClassLogger();
 
@@ -20,7 +23,7 @@ namespace OfertonAPI_V1.Controllers
 
         [Route("api/ProductoService")]
         [HttpGet]
-        public IActionResult GetProducto() 
+        public IActionResult GetProducto()
         {
 
             try
@@ -45,14 +48,16 @@ namespace OfertonAPI_V1.Controllers
 
         [Route("api/OrdenService")]
         [HttpPost]
-        public IActionResult InsertOrden() 
+        public IActionResult InsertOrden(OrdenEntity entity)
         {
 
             try
-            {
-                var vRes = objProducto.LIS_ProductoBusiness();
+            {               
 
-                return Ok(vRes);
+                string sResultado = Convert.ToString(objOrden.BusinessOrden(entity));
+               
+                return Ok(new { result = sResultado });
+
             }
             catch (Exception e)
             {
