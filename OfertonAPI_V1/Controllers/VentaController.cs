@@ -21,7 +21,7 @@ namespace OfertonAPI_V1.Controllers
 
         #region Producto
 
-        [Route("api/ProductoService")]
+        [Route("api/Product")]
         [HttpGet]
         public IActionResult GetProducto()
         {
@@ -46,7 +46,7 @@ namespace OfertonAPI_V1.Controllers
 
         #region Orden
 
-        [Route("api/OrdenService")]
+        [Route("api/Order")]
         [HttpPost]
         public IActionResult InsertOrden(OrdenEntity entity)
         {

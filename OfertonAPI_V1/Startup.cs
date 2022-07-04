@@ -48,14 +48,14 @@ namespace OfertonAPI_V1
 
                 app.UseDeveloperExceptionPage();
                 app.UseSwagger();
-                app.UseSwaggerUI(c => c.SwaggerEndpoint("/swagger/v1/swagger.json", "CRMLegalAPI v1"));
+                app.UseSwaggerUI(c => c.SwaggerEndpoint("/swagger/v1/swagger.json", "OfertonAPI v1"));
             }
             else
             {
                 app.UseSwagger();
                 app.UseSwaggerUI(c =>
                 {
-                    c.SwaggerEndpoint("/swagger/v1/swagger.json", "CRMLegalAPI v1");
+                    c.SwaggerEndpoint("/swagger/v1/swagger.json", "OfertonAPI v1");
                     c.RoutePrefix = string.Empty;
                 });
 
