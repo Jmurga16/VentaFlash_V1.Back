@@ -1,10 +1,10 @@
-USE DB_Oferton_V1
+USE DB_Oferton_V2
 GO
 
 --CREACION DE TABLAS
 
---TABLA Alumnos
-CREATE TABLE Producto(
+--TABLA Productos
+CREATE TABLE Product(
     nIdProducto		 INT NOT NULL IDENTITY(1,1) PRIMARY KEY ,
     sNombreProducto	VARCHAR(MAX),
 	sDescripcion	VARCHAR(MAX),
@@ -15,8 +15,8 @@ CREATE TABLE Producto(
 )
 GO
 
---TABLA Cursos
-CREATE TABLE Cliente(
+--TABLA Cliente
+CREATE TABLE Customer(
     nIdCliente	INT NOT NULL IDENTITY(1,1) PRIMARY KEY ,
 	sNombre		VARCHAR(MAX),
 	sCorreo		VARCHAR(MAX),    
@@ -24,8 +24,8 @@ CREATE TABLE Cliente(
 )
 GO
 
---TABLA Notas
-CREATE TABLE Ordenes(
+--TABLA Orden
+CREATE TABLE [Order](
     nIdOrden		 INT NOT NULL IDENTITY(1,1) PRIMARY KEY ,
 	nIdProducto INT,
 	FOREIGN KEY (nIdProducto) REFERENCES Producto(nIdProducto),
