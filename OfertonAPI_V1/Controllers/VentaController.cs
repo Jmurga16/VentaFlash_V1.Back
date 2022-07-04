@@ -52,11 +52,11 @@ namespace OfertonAPI_V1.Controllers
         {
 
             try
-            {               
+            {
 
                 string sResultado = Convert.ToString(objOrden.BusinessOrden(entity));
-               
-                return Ok(new { result = sResultado });
+
+                return Ok(sResultado);
 
             }
             catch (Exception e)
