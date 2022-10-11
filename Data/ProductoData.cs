@@ -17,7 +17,7 @@ namespace Data
 
         private readonly Logger logger = LogManager.GetCurrentClassLogger();
 
-        #region Conexion
+        #region Conexion a la BBDD
         private readonly Conexion oCon;
 
         public ProductoData()
@@ -26,7 +26,7 @@ namespace Data
         }
         #endregion
 
-        //Obtener Todos los productos
+        //Obtener Los datos del producto
         public List<ProductoEntity> LIS_ProductoData()
         {
 

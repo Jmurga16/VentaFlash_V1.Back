@@ -28,6 +28,7 @@ namespace OfertonAPI_V1.Controllers
 
             try
             {
+                //Obtener Datos del Producto Oferta
                 var vRes = objProducto.LIS_ProductoBusiness();
 
                 return Ok(vRes);
@@ -53,7 +54,7 @@ namespace OfertonAPI_V1.Controllers
 
             try
             {
-
+                //Comprar el Producto en Oferta
                 string sResultado = Convert.ToString(objOrden.BusinessOrden(entity));
 
                 return Ok(sResultado);

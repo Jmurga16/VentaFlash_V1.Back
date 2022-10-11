@@ -12,7 +12,7 @@ namespace Data
     {
         private readonly Logger logger = LogManager.GetCurrentClassLogger();
 
-        #region Conexion
+        #region Conexion a la BBDD
         private readonly Conexion oCon;
         public OrdenData()
         {
@@ -20,12 +20,14 @@ namespace Data
         }
         #endregion
 
+        //Comprar el Producto en Venta
         public object DataOrden(OrdenEntity entity)
         {
             string msj = string.Empty;
 
             try
             {
+                //Ejecutar el Store Procedure de la Orden
                 string sResultado = Convert.ToString(oCon.EjecutarEscalar("USP_MNT_Orden", 
                     entity.nIdProducto, entity.sNombre, entity.sCorreo, entity.sDireccion));
 
