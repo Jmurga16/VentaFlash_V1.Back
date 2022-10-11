@@ -1,3 +1,4 @@
+#VentaFlash_V1.Back
 Prueba Tecnica Venta Flash
 Back - End  C# .Net
 Version 1 - 3 Capas ( Entidad, Negocio, Datos )
@@ -24,3 +25,7 @@ Ejemplo:
 }
 
 Compilar.
+
+Los EndPoints se pueden probar en el UI Swagger:
+
+![4](https://user-images.githubusercontent.com/58633633/195212268-164fba7e-c383-4a65-a92a-20eae5be6d50.png)
